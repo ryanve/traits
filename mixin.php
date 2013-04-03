@@ -1,6 +1,7 @@
 <?php 
 /**
  * @package  airve/mixin
+ * @version  0.1.0
  * @link     http://github.com/airve/mixin
  * @author   Ryan Van Etten
  * @license  MIT
@@ -10,10 +11,6 @@ namespace airve;
 
 trait Mixin {
 
-    public function __toString() {
-        return static::toString($this);
-    }
-
     public function __call($name, $params) {
         return static::resolve($name, $params, $this);
     }
@@ -21,10 +18,14 @@ trait Mixin {
     public static function __callStatic($name, $params) {
         return static::resolve($name, $params);
     }
+   
+    public function __toString() {
+        return static::toString($this);
+    }
 
     /**
-     * @param  mixed   $item
-     * @return string
+     * @param   mixed   $item
+     * @return  string
      */
     public static function toString($item) {
         $item and $item = static::result($item);
