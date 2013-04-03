@@ -2,7 +2,7 @@
     "name": "airve/mixin",
     "description": "PHP trait for making extensible classes",
     "homepage": "https://github.com/airve/mixin",
-    "keywords": ["mixin", "trait", "extension", "oop"],
+    "keywords": ["mixin", "trait", "extension", "oop", "utility"],
     "license": "MIT",
     "authors": [
         {
