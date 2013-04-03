@@ -18,21 +18,6 @@ trait Mixin {
     public static function __callStatic($name, $params) {
         return static::resolve($name, $params);
     }
-   
-    public function __toString() {
-        return static::toString($this);
-    }
-
-    /**
-     * @param   mixed   $item
-     * @return  string
-     */
-    public static function toString($item) {
-        $item and $item = static::result($item);
-        if (null === $item || \is_scalar($item) || \is_callable([$item, '__toString']))
-            return (string) $item;
-        return \json_encode($item = \is_object($item) ? \get_object_vars($item) : (array) $item);
-    }
     
     /**
      * @param  string|int  $name
@@ -145,6 +130,21 @@ trait Mixin {
         foreach (\get_class_methods($object) as $m)
             $result[$m] = [$object, $m];
         return $result;
+    }
+    
+    /**
+     * @param   mixed   $item
+     * @return  string
+     */
+    public static function toString($item) {
+        $item and $item = static::result($item);
+        if (null === $item || \is_scalar($item) || \is_callable([$item, '__toString']))
+            return (string) $item;
+        return \json_encode($item = \is_object($item) ? \get_object_vars($item) : (array) $item);
+    }
+    
+    public function __toString() {
+        return static::toString($this);
     }
     
 }# trait
