@@ -5,6 +5,16 @@ PHP [trait](http://php.net/manual/en/language.oop5.traits.php) for making extens
 
 Requires: PHP 5.4+
 
+### Usage 
+
+```php
+class Example {
+
+    use \airve\Mixin;
+    
+}
+```
+
 ### License: [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (C) 2013 by [Ryan Van Etten](https://github.com/ryanve)
