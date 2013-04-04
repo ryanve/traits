@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  airve/mixin
- * @version  0.1.0
+ * @version  0.2.0
  * @link     http://github.com/airve/mixin
  * @author   Ryan Van Etten
  * @license  MIT
@@ -130,21 +130,6 @@ trait Mixin {
         foreach (\get_class_methods($object) as $m)
             $result[$m] = [$object, $m];
         return $result;
-    }
-    
-    /**
-     * @param   mixed   $item
-     * @return  string
-     */
-    public static function toString($item) {
-        $item and $item = static::result($item);
-        if (null === $item || \is_scalar($item) || \is_callable([$item, '__toString']))
-            return (string) $item;
-        return \json_encode($item = \is_object($item) ? \get_object_vars($item) : (array) $item);
-    }
-    
-    public function __toString() {
-        return static::toString($this);
     }
     
 }# trait
