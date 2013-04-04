@@ -29,7 +29,7 @@ trait Mixin {
         if ($fn = static::mixin((string) $name))
             return static::apply($fn, $scope, $params);
         if ('_e' === \substr($name, -2))
-            echo static::toString(static::apply(static::method(\substr($name, 0, -2), $scope), null, $params));
+            echo static::apply(static::method(\substr($name, 0, -2), $scope), null, $params);
         else \trigger_error(\get_called_class() . " method '$name' is not callable.");
     }
     
@@ -132,4 +132,4 @@ trait Mixin {
         return $result;
     }
     
-}# trait
+}#trait
