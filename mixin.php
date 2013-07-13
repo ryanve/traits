@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  airve/mixin
- * @version  0.2.0
+ * @version  0.2.1
  * @link     http://github.com/airve/mixin
  * @author   Ryan Van Etten
  * @license  MIT
@@ -71,7 +71,7 @@ trait Mixin {
      * @param  object   $scope
      * @return mixed
      */
-    public static function call(callable $fn, object $scope = null) {
+    public static function call(callable $fn, $scope = null) {
         return static::apply($fn, $scope, \array_slice(\func_get_args(), 2));
     }
 
@@ -81,7 +81,7 @@ trait Mixin {
      * @param  array    $params
      * @return mixed
      */
-    public static function apply(callable $fn, object $scope = null, array $params = null) {
+    public static function apply(callable $fn, $scope = null, array $params = null) {
         null !== $scope && $fn instanceof \Closure and $fn = \Closure::bind($fn, $scope, \get_class($scope));
         return \call_user_func_array($fn, $params ?: []);
     }
