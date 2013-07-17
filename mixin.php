@@ -1,7 +1,7 @@
 <?php 
 /**
  * @package  airve/mixin
- * @version  0.2.1
+ * @version  0.3.0
  * @link     http://github.com/airve/mixin
  * @author   Ryan Van Etten
  * @license  MIT
@@ -132,4 +132,12 @@ trait Mixin {
         return $result;
     }
     
+    /**
+     * @param  object  $object
+     * @return array
+     */
+    public function vars($object = null) {
+        return \get_object_vars(null === $object ? $this : $object);
+    }
+
 }#trait
