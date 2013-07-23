@@ -1,7 +1,10 @@
 ### \\[airve](https://github.com/airve)\\[Mixin](https://github.com/airve/mixin/blob/master/mixin.php)
 =====
 
-[`Mixin`](https://github.com/airve/mixin/blob/master/mixin.php) is an opensource PHP [trait](http://php.net/manual/en/language.oop5.traits.php) for making extensible [classes](http://php.net/manual/en/language.oop5.php).
+[`traits`](../) is a collection of opensource [PHP traits](http://php.net/manual/en/language.oop5.traits.php).
+
+- [`Mixin`](mixin.php) is for making extensible [classes](http://php.net/manual/en/language.oop5.php).
+- [`Reflect`](reflect.php) includes instantiation and context helpers.
 
 ### Usage 
 
@@ -9,7 +12,7 @@
 
 ```php
 class Example {
-    use \airve\Mixin;
+    use \traits\Mixin;
 }
 ```
 

@@ -1,13 +1,13 @@
 <?php 
 /**
- * @package  airve/mixin
- * @version  0.3.0
- * @link     http://github.com/airve/mixin
- * @author   Ryan Van Etten
- * @license  MIT
+ * @package airve/traits
+ * @version 0.4.0
+ * @link    http://github.com/airve/traits
+ * @author  Ryan Van Etten
+ * @license MIT
  */
 
-namespace airve;
+namespace traits;
 
 trait Mixin {
 
@@ -139,5 +139,4 @@ trait Mixin {
     public function vars($object = null) {
         return \get_object_vars(null === $object ? $this : $object);
     }
-
-}#trait
+}
