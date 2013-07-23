@@ -1,14 +1,13 @@
-### \\[airve](https://github.com/airve)\\[Mixin](https://github.com/airve/mixin/blob/master/mixin.php)
-=====
+# [traits](../../)
 
-[`traits`](../) is a collection of opensource [PHP traits](http://php.net/manual/en/language.oop5.traits.php).
+[`traits`](../../) is a collection of opensource [PHP traits](http://php.net/manual/en/language.oop5.traits.php).
 
-- [`Mixin`](mixin.php) is for making extensible [classes](http://php.net/manual/en/language.oop5.php).
-- [`Reflect`](reflect.php) includes instantiation and context helpers.
+- [`Mixin`](mixin.php) is a trait for making extensible [classes](http://php.net/manual/en/language.oop5.php).
+- [`Reflect`](reflect.php) is a trait that includes instantiation and context helpers.
 
-### Usage 
+## Usage 
 
-#### import into a class
+### import into a class
 
 ```php
 class Example {
@@ -16,7 +15,7 @@ class Example {
 }
 ```
 
-#### static mixins
+### static mixins
 
 Add via key/value:
 
@@ -42,7 +41,7 @@ Call:
 Example::foo(); # 'bar'
 ```
 
-#### instance mixins
+### instance mixins
 
 Specify instance methods by passing `true`:
 
@@ -69,6 +68,6 @@ $example = new Example;
 Example->foo(); # 'bar'
 ```
 
-### License: [MIT](http://opensource.org/licenses/MIT)
+## License: [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (C) 2013 by [Ryan Van Etten](https://github.com/ryanve)
