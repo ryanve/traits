@@ -61,9 +61,7 @@ trait Mixin {
      * @return mixed
      */
     public static function result($fn) {
-        return $fn instanceof \Closure ? \call_user_func_array(
-            $fn, \array_slice(\func_get_args(), 1)
-        ) : $fn;
+        return $fn instanceof \Closure ? \call_user_func_array($fn, \array_slice(\func_get_args(), 1)) : $fn;
     }
     
     /**
