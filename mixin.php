@@ -1,9 +1,8 @@
 <?php 
 /**
- * @package airve/traits
- * @version 0.4.0
- * @link    http://github.com/airve/traits
- * @author  Ryan Van Etten
+ * @package ryanve/traits
+ * @version 0.5.0
+ * @link    http://github.com/ryanve/traits
  * @license MIT
  */
 

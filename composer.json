@@ -1,7 +1,7 @@
 {
-    "name": "airve/traits",
+    "name": "ryanve/traits",
     "description": "PHP traits for making extensible classes.",
-    "homepage": "https://github.com/airve/traits",
+    "homepage": "https://github.com/ryanve/traits",
     "keywords": ["mixin", "trait", "extension", "oop", "utility"],
     "license": "MIT",
     "authors": [{
@@ -12,7 +12,7 @@
         "php": ">=5.4"
     },
     "autoload": {
-        "classmap":  [""]
+        "classmap": []
     },
     "minimum-stability": "dev"
 }
