@@ -1,11 +1,7 @@
 <?php 
 /**
- * @package ryanve/traits
- * @version 0.5.0
- * @link    http://github.com/ryanve/traits
- * @license MIT
+ * @link https://github.com/ryanve/traits
  */
-
 namespace traits;
 
 trait Mixin {
