@@ -2,8 +2,9 @@
 
 [`traits`](../../) is a collection of opensource [PHP traits](http://php.net/manual/en/language.oop5.traits.php).
 
-- [`Mixin`](mixin.php) is a trait for making extensible [classes](http://php.net/manual/en/language.oop5.php).
-- [`Reflect`](reflect.php) is a trait that includes instantiation and context helpers.
+- [`Data`](Data.php) includes data/removeData methods.
+- [`Mixin`](Mixin.php) is for making extensible [classes](http://php.net/manual/en/language.oop5.php).
+- [`Reflect`](Reflect.php) includes instantiation and context helpers.
 
 ## Usage 
 
