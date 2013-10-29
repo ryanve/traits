@@ -1,8 +1,9 @@
-# [traits](../../)
+# [traits](../../) ([0.8](../../releases))
 
-[`traits`](../../) is a collection of opensource [PHP traits](http://php.net/manual/en/language.oop5.traits.php).
+#### opensource [PHP traits](http://php.net/manual/en/language.oop5.traits.php)
 
 - [`Data`](Data.php) includes data/removeData methods.
+- [`Emitter`](Emitter.php) is an event emitter based on [EventEmitter](http://nodejs.org/api/events.html).
 - [`Mixin`](Mixin.php) is for making extensible [classes](http://php.net/manual/en/language.oop5.php).
 - [`Aware`](Aware.php) includes instantiation and context helpers.
 

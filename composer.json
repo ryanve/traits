@@ -1,7 +1,7 @@
 {
     "name": "ryanve/traits",
     "description": "PHP traits for making extensible classes.",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "homepage": "https://github.com/ryanve/traits",
     "keywords": ["mixin", "trait", "extension", "oop", "utility"],
     "license": "MIT",
