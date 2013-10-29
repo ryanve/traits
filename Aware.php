@@ -4,9 +4,9 @@
  */
 namespace traits;
 
-trait Reflect {
+trait Aware {
     /** 
-     * Create a new instance of the current class.
+     * Create a \ReflectionClass instance.
      * @return object
      */
     public static function reflect($class = null) {

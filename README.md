@@ -4,7 +4,7 @@
 
 - [`Data`](Data.php) includes data/removeData methods.
 - [`Mixin`](Mixin.php) is for making extensible [classes](http://php.net/manual/en/language.oop5.php).
-- [`Reflect`](Reflect.php) includes instantiation and context helpers.
+- [`Aware`](Aware.php) includes instantiation and context helpers.
 
 ## Usage 
 
