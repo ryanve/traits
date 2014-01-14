@@ -1,19 +1,19 @@
 {
-    "name": "ryanve/traits",
-    "description": "PHP traits for making extensible classes.",
-    "version": "0.8.0",
-    "homepage": "https://github.com/ryanve/traits",
-    "keywords": ["mixin", "trait", "extension", "oop", "utility"],
-    "license": "MIT",
-    "authors": [{
-        "name": "Ryan Van Etten",
-        "homepage": "http://ryanve.com"
-    }],
-    "require": {
-        "php": ">=5.4"
-    },
-    "autoload": {
-        "psr-0": { "traits": "../" }
-    },
-    "minimum-stability": "dev"
+  "name": "ryanve/traits",
+  "description": "PHP traits for making extensible classes.",
+  "version": "0.8.0",
+  "homepage": "https://github.com/ryanve/traits",
+  "keywords": ["mixin", "trait", "extension", "oop", "utility"],
+  "license": "MIT",
+  "authors": [{
+    "name": "Ryan Van Etten",
+    "homepage": "http://ryanve.com"
+  }],
+  "require": {
+    "php": ">=5.4"
+  },
+  "autoload": {
+    "psr-0": { "traits": "../" }
+  },
+  "minimum-stability": "dev"
 }
