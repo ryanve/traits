@@ -6,11 +6,11 @@ namespace traits;
 
 trait Mixin {
 
-  public function __call($name, $params) {
+  function __call($name, $params) {
     return static::resolve($name, $params, $this);
   }
   
-  public static function __callStatic($name, $params) {
+  static function __callStatic($name, $params) {
     return static::resolve($name, $params);
   }
   
@@ -20,7 +20,7 @@ trait Mixin {
    * @param  object    $scope
    * @return mixed
    */
-  public static function resolve($name, array $params = null, $scope = null) {
+  static function resolve($name, array $params = null, $scope = null) {
     if ($fn = static::mixin((string) $name))
       return static::apply($fn, $scope, $params);
     if ('_e' === \substr($name, -2))
@@ -34,7 +34,7 @@ trait Mixin {
    * @param  int|bool         $chain
    * @return mixed
    */
-  public static function mixin($name, $fn = 0, $chain = 0) {
+  static function mixin($name, $fn = 0, $chain = 0) {
     static $mixins;
     $mixins = $mixins ?: [[], []];
     $name and $name = static::result($name);
@@ -55,7 +55,7 @@ trait Mixin {
    * @param  mixed  $fn
    * @return mixed
    */
-  public static function result($fn) {
+  static function result($fn) {
     return $fn instanceof \Closure ? \call_user_func_array($fn, \array_slice(\func_get_args(), 1)) : $fn;
   }
   
@@ -64,7 +64,7 @@ trait Mixin {
    * @param  object   $scope
    * @return mixed
    */
-  public static function call(callable $fn, $scope = null) {
+  static function call(callable $fn, $scope = null) {
     return static::apply($fn, $scope, \array_slice(\func_get_args(), 2));
   }
 
@@ -74,7 +74,7 @@ trait Mixin {
    * @param  array  $params
    * @return mixed
    */
-  public static function apply(callable $fn, $scope = null, array $params = null) {
+  static function apply(callable $fn, $scope = null, array $params = null) {
     null !== $scope && $fn instanceof \Closure and $fn = \Closure::bind($fn, $scope, \get_class($scope));
     return \call_user_func_array($fn, $params ?: []);
   }
@@ -83,7 +83,7 @@ trait Mixin {
    * @param  callable $fn
    * @return callable
    */
-  public static function curry($fn) {
+  static function curry($fn) {
     $curries = \array_slice(\func_get_args(), 1);
     return function() use ($fn, $curries) {
       return \call_user_func_array($fn, \array_merge($curries, \func_get_args()));
@@ -94,7 +94,7 @@ trait Mixin {
    * @param  callable $fn
    * @return callable
    */
-  public static function partial($fn) {
+  static function partial($fn) {
     $curries = \array_slice(\func_get_args(), 1);
     return function() use ($fn, $curries) {
       $params = \func_get_args();
@@ -109,7 +109,7 @@ trait Mixin {
    * @param  string|object  $scope
    * @return callable
    */
-  public static function method($name, $scope = null) {
+  static function method($name, $scope = null) {
     return [null === $scope ? \get_called_class() : $scope, $name];
   }
   
@@ -117,7 +117,7 @@ trait Mixin {
    * @param  string|object  $object
    * @return array
    */
-  public static function methods($object = null) {
+  static function methods($object = null) {
     $result = [];
     null === $object and $object = \get_called_class();
     foreach (\get_class_methods($object) as $m)
@@ -129,7 +129,7 @@ trait Mixin {
    * @param  object  $object
    * @return array
    */
-  public function vars($object = null) {
+  function vars($object = null) {
     return \get_object_vars(null === $object ? $this : $object);
   }
 }

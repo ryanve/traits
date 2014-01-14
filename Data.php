@@ -7,7 +7,7 @@ namespace traits;
 trait Data {
   protected $data = [];
 
-  public function data($key = null, $val = null) {
+  function data($key = null, $val = null) {
     $key instanceof \Closure and $key = $key($this->data);
     $has = 1 < \func_num_args();
     if (null === $key)
@@ -19,8 +19,8 @@ trait Data {
     return $this->data;
   }
 
-  public function removeData($key = null) {
-    if ( ! \func_num_args()) return $this->data = [];
+  function removeData($key = null) {
+    if (!\func_num_args()) return $this->data = [];
     \is_scalar($key) and $key = \array_flip(\func_get_args());
     return $this->data = \array_diff_key($this->data, $key);
   }

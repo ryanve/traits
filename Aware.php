@@ -9,7 +9,7 @@ trait Aware {
   /** 
    * @return ReflectionClass
    */
-  public static function reflect($class = null) {
+  static function reflect($class = null) {
     return new ReflectionClass(null === $class ? \get_called_class() : $class);
   }
 
@@ -17,7 +17,7 @@ trait Aware {
    * @description Create a new instance of the current class.
    * @return object
    */
-  public static function instantiate() {
+  static function instantiate() {
     return static::reflect()->newInstanceArgs(\func_get_args());
   }
 
@@ -26,7 +26,7 @@ trait Aware {
    * class must call `static::context($this)` in its constructor or elsewhere.
    * @return object
    */
-  public static function context($ob = null) {
+  static function context($ob = null) {
     static $curr;
     $class = __CLASS__;
     return $curr = null === $ob ? ($curr ?: new $class) : ($ob instanceof $class ? $ob : new $class($ob));
