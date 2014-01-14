@@ -1,5 +1,4 @@
-# [traits](../../) ([0.8](../../releases))
-
+# [traits](../../) ([0.9](../../releases))
 #### opensource [PHP traits](http://php.net/manual/en/language.oop5.traits.php)
 
 - [`Data`](Data.php) includes data/removeData methods.
@@ -9,67 +8,69 @@
 
 ## Usage 
 
-### import into a class
+### Import into a class
 
 ```php
 class Example {
-    use \traits\Mixin;
+  use \traits\Mixin;
 }
 ```
 
-### static mixins
+### Static mixins
 
-Add via key/value:
+#### static key/value mixin
 
 ```php
 Example::mixin('foo', function() {
-    return 'bar';
+  return 'bar';
 });
 ```
 
-Or via array:
+#### static array mixin
 
 ```php
-Example::mixin(array(
-    'foo' => function() {
-        return 'bar';
-    }
-));
+Example::mixin([
+  'foo' => function() {
+    return 'bar';
+  }
+]);
 ```
 
-Call:
+#### static method call
 
 ```php
 Example::foo(); # 'bar'
 ```
 
-### instance mixins
+### Instance mixins
 
-Specify instance methods by passing `true`:
+Specify instance methods by passing `true`
+
+#### static key/value mixin
 
 ```php
 Example::mixin('foo', function() {
-    return 'bar';
+  return 'bar';
 }, true);
 ```
 
-Or:
+#### instance array mixin
 
 ```php
-Example::mixin(array(
-    'foo' => function() {
-        return 'bar';
-    }
-), true);
+Example::mixin([
+  'foo' => function() {
+    return 'bar';
+  }
+], true);
 ```
 
-Call:
+#### instance method call
 
 ```php 
 $example = new Example;
 Example->foo(); # 'bar'
 ```
 
-## License: [MIT](http://opensource.org/licenses/MIT)
+## License
 
-Copyright (C) 2013 by [Ryan Van Etten](https://github.com/ryanve)
+[MIT](http://opensource.org/licenses/MIT)
