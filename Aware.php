@@ -10,7 +10,7 @@ trait Aware {
    * @return ReflectionClass
    */
   static function reflect($class = null) {
-    return new ReflectionClass(null === $class ? \get_called_class() : $class);
+    return new ReflectionClass(null === $class ? get_called_class() : $class);
   }
 
   /** 
@@ -18,7 +18,7 @@ trait Aware {
    * @return object
    */
   static function instantiate() {
-    return static::reflect()->newInstanceArgs(\func_get_args());
+    return static::reflect()->newInstanceArgs(func_get_args());
   }
 
   /**
