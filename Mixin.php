@@ -16,9 +16,9 @@ trait Mixin {
   }
   
   /**
-   * @param  string|int  $name
-   * @param  array     $params
-   * @param  object    $scope
+   * @param string|int $name
+   * @param array $params
+   * @param object $scope
    * @return mixed
    */
   static function resolve($name, array $params = null, $scope = null) {
@@ -30,9 +30,9 @@ trait Mixin {
   }
   
   /**
-   * @param  array|object|string|int  $name
-   * @param  callable|string      $fn  
-   * @param  int|bool         $chain
+   * @param array|object|string|int $name
+   * @param callable|string $fn  
+   * @param int|bool $chain
    * @return mixed
    */
   static function mixin($name, $fn = 0, $chain = 0) {
@@ -53,7 +53,7 @@ trait Mixin {
   }
   
   /**
-   * @param  mixed  $fn
+   * @param mixed $fn
    * @return mixed
    */
   static function result($fn) {
@@ -61,8 +61,8 @@ trait Mixin {
   }
   
   /**
-   * @param  callable $fn
-   * @param  object   $scope
+   * @param callable $fn
+   * @param object $scope
    * @return mixed
    */
   static function call(callable $fn, $scope = null) {
@@ -70,9 +70,9 @@ trait Mixin {
   }
 
   /**
-   * @param  callable $fn
-   * @param  object   $scope
-   * @param  array  $params
+   * @param callable $fn
+   * @param object $scope
+   * @param array $params
    * @return mixed
    */
   static function apply(callable $fn, $scope = null, array $params = null) {
@@ -81,7 +81,7 @@ trait Mixin {
   }
   
   /**
-   * @param  callable $fn
+   * @param callable $fn
    * @return callable
    */
   static function curry($fn) {
@@ -92,7 +92,7 @@ trait Mixin {
   }
   
   /**
-   * @param  callable $fn
+   * @param callable $fn
    * @return callable
    */
   static function partial($fn) {
@@ -106,8 +106,8 @@ trait Mixin {
   }
   
   /**
-   * @param  string     $name
-   * @param  string|object  $scope
+   * @param string $name
+   * @param string|object $scope
    * @return callable
    */
   static function method($name, $scope = null) {
@@ -115,7 +115,7 @@ trait Mixin {
   }
   
   /**
-   * @param  string|object  $object
+   * @param string|object $object
    * @return array
    */
   static function methods($object = null) {
@@ -127,7 +127,7 @@ trait Mixin {
   }
   
   /**
-   * @param  object  $object
+   * @param object $object
    * @return array
    */
   function vars($object = null) {
