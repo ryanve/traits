@@ -81,6 +81,7 @@ trait Mixin {
   }
   
   /**
+   * @deprecated
    * @param callable $fn
    * @return callable
    */
@@ -92,6 +93,7 @@ trait Mixin {
   }
   
   /**
+   * @deprecated
    * @param callable $fn
    * @return callable
    */
